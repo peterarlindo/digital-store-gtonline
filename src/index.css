@@ -1,0 +1,84 @@
+/* Paleta Oficial Digital Store */
+:root {
+  --primary: #C92071;
+  --secondary: #B5B6F2;
+  --tertiary: #991956;
+  --error: #EE4266;
+  --success: #52CA76;
+  --warning: #F6AA1C;
+  --dark-gray: #1F1F1F;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8F8F8F;
+  --light-gray-2: #CCCCCC;
+  --light-gray-3: #F5F5F5;
+  --white: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--light-gray-3);
+  color: var(--dark-gray-2);
+}
+
+.text-primary-custom { color: var(--primary) !important; }
+.bg-primary-custom { background-color: var(--primary) !important; }
+.text-dark-gray { color: var(--dark-gray) !important; }
+.text-dark-gray-2 { color: var(--dark-gray-2) !important; }
+.text-light-gray { color: var(--light-gray) !important; }
+.bg-dark-gray { background-color: var(--dark-gray) !important; }
+
+/* Product Options & Selections */
+.product-option-item {
+  cursor: pointer;
+  border: 1px solid var(--light-gray-2);
+  transition: all 0.2s ease-in-out;
+}
+
+.product-option-item.selected {
+  border: 2px solid var(--primary) !important;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* --- Estilização do Checkbox com a sua imagem original --- */
+.form-check-input[type="checkbox"] {
+  border-radius: 0em;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid var(--dark-gray-3);
+  cursor: pointer;
+}
+
+.form-check-input[type="checkbox"]:checked {
+  background-color: #C92071;
+  border-color: #C92071;
+  /* Usando o caminho direto para a pasta public do React */
+  background-image: url('assets/Vector 3.png'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-check-input {
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #474747;
+  cursor: pointer;
+}
+
+
+/* Radio Button com o ponto interno maior */
+.form-check-input[type="radio"]:checked {
+  background-color: #ffffff;
+  border-color: #c92071;
+  /* Aumentado o raio do círculo 'r' para 2.6 para preencher melhor o espaço */
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.8' fill='%23c92071'/%3e%3c/svg%3e");
+}
